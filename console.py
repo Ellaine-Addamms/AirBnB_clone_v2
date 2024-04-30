@@ -186,7 +186,7 @@ class HBNBCommand(cmd.Cmd):
 
         if c_name not in HBNBCommand.classes:
             print("** class doesn't exist **")
-            return
+            return 
 
         if not c_id:
             print("** instance id missing **")
@@ -320,6 +320,7 @@ class HBNBCommand(cmd.Cmd):
                 new_dict.__dict__.update({att_name: att_val})
 
         new_dict.save()  # save updates to file
+
 
     def help_update(self):
         """ Help information for the update class """
